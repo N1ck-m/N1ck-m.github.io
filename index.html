@@ -4,21 +4,144 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nick Mole — Geospatial Portfolio</title>
-<style>
-  html,body{height:100%;margin:0}
-  body{display:flex;align-items:center;justify-content:center;background:#101418;color:#e8e6e3;font-family:Georgia,'Times New Roman',serif}
-  main{text-align:center;padding:2rem}
-  h1{font-size:1.6rem;font-weight:normal;letter-spacing:.02em;margin:0 0 .6rem}
-  p{color:#9aa4ad;margin:.2rem 0}
-  .soon{font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:#5f6b75;margin-top:2rem}
-</style>
+<meta name="description" content="Nick Mole builds geospatial data systems: open historical transit maps, infrastructure datasets, and the analysis that targets field work.">
+<meta property="og:title" content="Nick Mole — Geospatial Portfolio">
+<meta property="og:description" content="Open data, historical maps, and infrastructure systems — mapped.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-  <h1>Nick Mole</h1>
-  <p>Geospatial data modeling &amp; mapping</p>
-  <p>DC streetcars &middot; OpenHistoricalMap &middot; SOTMUS 2025</p>
-  <p class="soon">Portfolio in development</p>
-</main>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="nav-name" href="index.html">Nick Mole</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-resume" href="#">Résumé (PDF)</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-map" aria-hidden="true">
+    <!-- placeholder: decorative street grid; will become a live map embed -->
+    <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#d8d2c6" stroke-width="1.5" fill="none">
+        <path d="M0,60 H800"/><path d="M0,140 H800"/><path d="M0,230 H800"/><path d="M0,320 H800"/><path d="M0,410 H800"/>
+        <path d="M80,0 V500"/><path d="M190,0 V500"/><path d="M300,0 V500"/><path d="M430,0 V500"/><path d="M560,0 V500"/><path d="M690,0 V500"/>
+        <path d="M0,0 L300,230" stroke-dasharray="5 4"/><path d="M430,0 L800,260" stroke-dasharray="5 4"/>
+      </g>
+      <path d="M40,470 C200,380 260,300 380,260 S620,150 780,60" stroke="#b4552d" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="380" cy="260" r="7" fill="#b4552d"/><circle cx="620" cy="170" r="7" fill="#b4552d"/><circle cx="180" cy="392" r="7" fill="#b4552d"/>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <h1>Nick Mole</h1>
+    <p class="tagline">Geospatial analyst building open data systems for cities — transit networks, infrastructure, and the maps that put field resources where they matter.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">View Work</a>
+      <a class="btn btn-ghost" href="#">Résumé (PDF)</a>
+    </div>
+    <p class="currently">Currently: placeholder line about what I'm mapping this month.</p>
+  </div>
+</section>
+
+<!-- ============ SELECTED WORK ============ -->
+<section id="work" class="section">
+  <h2 class="section-title">Selected Work</h2>
+  <div class="cards">
+
+    <a class="card" href="projects/streetcars.html">
+      <div class="card-visual" data-theme="streetcars">
+        <svg viewBox="0 0 400 220" aria-hidden="true"><path d="M20,190 C110,140 160,150 220,90 S330,60 385,30" stroke="#e8e6e3" stroke-width="3" fill="none"/><circle cx="220" cy="90" r="5" fill="#e8e6e3"/></svg>
+      </div>
+      <div class="card-body">
+        <h3>DC Streetcar Network, 1862–1962</h3>
+        <p class="card-problem">Rebuilding a century of lost transit as queryable open data, with a live editor.</p>
+        <ul class="tags"><li>OpenHistoricalMap</li><li>Leaflet</li><li>QGIS</li></ul>
+        <span class="card-cta">Case study →</span>
+      </div>
+    </a>
+
+    <div class="card card-pending">
+      <div class="card-visual" data-theme="datacenters">
+        <svg viewBox="0 0 400 220" aria-hidden="true"><g fill="#e8e6e3"><rect x="40" y="90" width="46" height="110"/><rect x="110" y="60" width="46" height="140"/><rect x="180" y="100" width="46" height="100"/><rect x="250" y="50" width="46" height="150"/><rect x="320" y="95" width="46" height="105"/></g></svg>
+      </div>
+      <div class="card-body">
+        <h3>Data Center Alley, Mapped</h3>
+        <p class="card-problem">Filler: what the current data center landscape in Northern Virginia actually looks like.</p>
+        <ul class="tags"><li>Overpass</li><li>QGIS</li><li>OpenStreetMap</li></ul>
+        <span class="card-badge">Case study in progress</span>
+      </div>
+    </div>
+
+    <div class="card card-pending">
+      <div class="card-visual" data-theme="baist">
+        <svg viewBox="0 0 400 220" aria-hidden="true"><g stroke="#e8e6e3" stroke-width="1.5" fill="none"><path d="M0,55 H400"/><path d="M0,110 H400"/><path d="M0,165 H400"/><path d="M70,0 V220"/><path d="M150,0 V220"/><path d="M240,0 V220"/><path d="M330,0 V220"/></g></svg>
+      </div>
+      <div class="card-body">
+        <h3>Baist 1919 Atlas, Georeferenced</h3>
+        <p class="card-problem">Filler: 43 historic plates brought into modern mapping — before/after slider lives here.</p>
+        <ul class="tags"><li>QGIS</li><li>Georeferencing</li><li>Historic GIS</li></ul>
+        <span class="card-badge">Case study in progress</span>
+      </div>
+    </div>
+
+    <div class="card card-pending">
+      <div class="card-visual" data-theme="blender">
+        <svg viewBox="0 0 400 220" aria-hidden="true"><g fill="#e8e6e3"><path d="M60,180 L120,90 L180,140 L240,50 L300,120 L360,40 V180 Z" opacity=".85"/></g></svg>
+      </div>
+      <div class="card-body">
+        <h3>Home Values in 3D</h3>
+        <p class="card-problem">Filler: ten-year change in home values, QGIS to Blender first render.</p>
+        <ul class="tags"><li>QGIS</li><li>Blender</li><li>Zillow data</li></ul>
+        <span class="card-badge">Case study in progress</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section class="section section-tight">
+  <h2 class="section-title">Stack</h2>
+  <div class="stack-groups">
+    <div><h4>Geospatial</h4><ul class="chips"><li>ArcGIS Online</li><li>QGIS</li><li>OpenStreetMap</li><li>OpenHistoricalMap</li><li>Leaflet</li><li>Mapillary</li><li>Overpass</li></ul></div>
+    <div><h4>Data</h4><ul class="chips"><li>SQL</li><li>QuickBase</li><li>Excel (advanced)</li><li>STATA</li><li>Python</li></ul></div>
+    <div><h4>Practice</h4><ul class="chips"><li>Georeferencing</li><li>Hotspot analysis</li><li>Data reconciliation</li><li>Recurring reporting</li><li>Technical writing</li></ul></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <h2 class="section-title">About</h2>
+  <div class="about-grid">
+    <div class="about-photo" aria-label="Portrait placeholder">Portrait<br>(photo TK)</div>
+    <div class="about-text">
+      <p>Filler paragraph: three sentences — current role stated factually, economics degree, SOTMUS speaker, relocating to Washington Heights. Written for a hiring manager skimming, not for other mappers.</p>
+      <p class="about-photo-link">Also a documentary photographer → <a href="#">photography site</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-row">
+    <a class="btn btn-primary" href="mailto:placeholder@example.com">Email</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/nick-mole/" rel="me">LinkedIn</a>
+    <a class="btn btn-ghost" href="https://github.com/N1ck-m" rel="me">GitHub</a>
+    <a class="btn btn-ghost" href="https://www.openstreetmap.org/user/NickMole" rel="me">OpenStreetMap</a>
+    <a class="btn btn-ghost" href="#">Résumé (PDF)</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Nick Mole · Built with plain HTML/CSS — no trackers, no frameworks. <span class="footer-note">Layout prototype v0.2 (filler content)</span></p>
+</footer>
+
 </body>
 </html>
