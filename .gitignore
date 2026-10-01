@@ -1,0 +1,9 @@
+# OS noise
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor / build scratch
+*.log
+node_modules/
+.sass-cache/
