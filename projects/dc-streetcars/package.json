@@ -1,0 +1,1 @@
+{"name":"dc-streetcars","version":"2.0.0","private":true,"scripts":{"test":"node --test tests/profile.test.js","build":"python3 build.py","serve":"python3 serve.py"}}
